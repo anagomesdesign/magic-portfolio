@@ -52,7 +52,7 @@ const home = {
   subline: (
     <>
       I'm a Senior Product Designer with over 15 years of experience with design and tech.
-      In my spare time, you will find me learning Front End with <InlineCode>React</InlineCode> or playing videogames.
+      In my spare time, you will find me studying Front End with <InlineCode>React</InlineCode> or playing videogames 🎮.
     </>
   ),
 };
