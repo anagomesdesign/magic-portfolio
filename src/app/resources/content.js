@@ -1,24 +1,25 @@
-import { InlineCode } from "@/once-ui/components";
+import { InlineCode, SmartLink } from "@/once-ui/components";
+import Link from "next/link";
+import { display } from "./config";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Ana",
+  lastName: "Gomes",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "Senior Product Designer",
   avatar: "/images/avatar.jpg",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "America/Winnipeg", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: [], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      Lorem Ipsum
     </>
   ),
 };
@@ -29,34 +30,30 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/anagomesdesign",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/anacsgomes/",
   },
   {
-    name: "X",
-    icon: "x",
-    link: "",
+    name: "Medium",
+    icon: "book",
+    link: "https://medium.com/@anagomesdesign",
   },
-  {
-    name: "Email",
-    icon: "email",
-    link: "mailto:example@gmail.com",
-  },
+  
 ];
 
 const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Design engineer and builder</>,
+  headline: <>Hi, I'm Ana</>,
   subline: (
     <>
-      I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm a Senior Product Designer with over 15 years of experience with design and tech.
+      In my spare time, you will find me studying Front End with <InlineCode>React</InlineCode> or playing videogames 🎮.
     </>
   ),
 };
@@ -73,7 +70,7 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -81,10 +78,13 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Ana is a senior Product Designer with 15+ years 
+        of experience creating intuitive digital experiences. 
+        She is proficient in leading design projects from start to finish, 
+        managing design sprints and design systems. Passionate about ethical and inclusive design, her goal is 
+        to use her skills to make a meaningful impact.
       </>
+      
     ),
   },
   work: {
@@ -92,95 +92,134 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "SPUD",
+        timeframe: "Jan 2024 - Present",
+        role: "Lead Product Designer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Led redesign of catalog page filtering system to enhance user experience and align with business goals.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed UX for new membership program to increase customer retention.
           </>,
+          <>
+            Optimized mobile experience for growing user base by improving navigation and product visualization.
+          </>
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Ubisoft",
+        timeframe: "Nov 2022 - Dec 2023",
+        role: "UI/UX Designer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Revamped asset management workflows, reducing operation friction for production teams.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Optimized internal tools for asset and work management systems, streamlining workflows and improving team efficiency.
+          </>,
+          <>
+            Collaborated with production teams to identify pain points and deliver tailored solutions, enhancing cross-team collaboration.
+          </>
+        ],
+        images: [],
+      },
+      {
+        company: "Shopify",
+        timeframe: "Oct 2021 - Oct 2022",
+        role: "Senior Product Designer",
+        achievements: [
+          <>
+            Focused on embedding data-driven features into the product management area, improving merchant experience in Shopify’s admin area.
+          </>,
+          <>
+            Designed one of the first iterations of Shopify's AI feature, enabling merchants to efficiently identify and manage product categories (product taxonomy).
+          </>,
+          <>
+            Partnered with product and engineering teams to enhance store analytics, driving a rise in feature adoption.
+          </>
+        ],
+        images: [],
+      },
+
+      {
+        company: "SkipTheDishes",
+        timeframe: "Dec 2018 - Oct 2021",
+        role: "Lead Product Designer",
+        achievements: [
+          <>
+            Led design efforts for the Courier Experience team, overseeing the courier app, portal, and chat—key tools supporting couriers within the Skip network.
+          </>,
+          <>
+            Spearheaded the end-to-end design of internal tools, improving operational efficiency for customer service teams.
+          </>,
+          <>
+            Provided mentorship to mid-level designers, fostering growth and team cohesion.
+          </>,
+          <>
+            Collaborated with design leads in building the first Skip's design system.
           </>,
         ],
         images: [],
       },
+
+      
     ],
   },
+
+
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Federal University of Goiás - UFG",
+        description: <>Bachelor's degree in Graphic Design (2012) </>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Project Management Institute - PMI",
+        description: <>Introductory Course on Project Management (2014)</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Skills",
     skills: [
+
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+        title: "Core Skills",
+        description: <>Visual Design / Prototyping / Design Systems / Interaction Design / 
+        User & Market Research / Product Management / Design Process</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+        title: "Tools",
+        description: <>Figma / Miro / Adobe Creative Suite / Jira / GitHub / VS Code / AI</>,
+        // optional: leave the array empty if you don't want to display images
+        images: [],
+      },
+      {
+        title: "Technical Skills",
+        description: <>HTML / CSS / JavaScript / React</>,
         // optional: leave the array empty if you don't want to display images
         images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-04.jpg",
+          //   alt: "Project image",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
     ],
@@ -196,7 +235,7 @@ const blog = {
 };
 
 const work = {
-  label: "Work",
+  label: "Portfolio",
   title: "My projects",
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts

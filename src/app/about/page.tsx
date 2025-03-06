@@ -239,6 +239,7 @@ export default function About() {
                         </Text>
                       ))}
                     </Column>
+
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" wrap>
                         {experience.images.map((image, index) => (
@@ -267,6 +268,14 @@ export default function About() {
                     )}
                   </Column>
                 ))}
+  
+              <Button
+                label="See more on LinkedIn"
+                href="https://www.linkedin.com/in/anacsgomes/"
+                target="_blank"
+              > 
+              </Button>
+
               </Column>
             </>
           )}
