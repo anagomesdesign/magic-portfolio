@@ -1,5 +1,6 @@
 import { InlineCode, SmartLink } from "@/once-ui/components";
 import Link from "next/link";
+import { display } from "./config";
 
 const person = {
   firstName: "Ana",
