@@ -9,38 +9,7 @@ import styles from "@/components/Header.module.scss";
 import { routes, display } from "@/app/resources";
 import { person, home, about, blog, work, gallery } from "@/app/resources/content";
 
-type TimeDisplayProps = {
-  timeZone: string;
-  locale?: string; // Optionally allow locale, defaulting to 'en-GB'
-};
-
-const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
-  const [currentTime, setCurrentTime] = useState("");
-
-  useEffect(() => {
-    const updateTime = () => {
-      const now = new Date();
-      const options: Intl.DateTimeFormatOptions = {
-        timeZone,
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        hour12: true,
-      };
-      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
-      setCurrentTime(timeString);
-    };
-
-    updateTime();
-    const intervalId = setInterval(updateTime, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [timeZone, locale]);
-
-  return <>{currentTime}</>;
-};
-
-export default TimeDisplay;
+// Removed TimeDisplay component
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
@@ -59,7 +28,7 @@ export const Header = () => {
         horizontal="center"
       >
         <Flex paddingLeft="12" fillWidth vertical="center" textVariant="body-default-s">
-          {display.location && <Flex hide="s">{person.location}</Flex>}
+          {/* {display.location && <Flex hide="s">{person.location}</Flex>} */}
         </Flex>
         <Flex fillWidth horizontal="center">
           <Flex
@@ -154,7 +123,7 @@ export const Header = () => {
             textVariant="body-default-s"
             gap="20"
           >
-            <Flex hide="s">{display.time && <TimeDisplay timeZone={person.location} />}</Flex>
+            {/* Removed TimeDisplay usage */}
           </Flex>
         </Flex>
       </Flex>
