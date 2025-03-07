@@ -17,6 +17,10 @@ team:
     linkedIn: "https://www.linkedin.com/company/skipthedishes"
 ---
 
+> This case study is divided into two sections: a concise version that includes an Overview, Challenges & Learnings, and Outcome, and a detailed version that delves deeper into the project specifics and the design process.
+
+[Go to detailed case study](#detailed-case-study)
+
 ## Overview
 
 The Actions System is the main tool used by operations and customer service teams at [Skip](https://www.skipthedishes.com), one of the biggest food delivery apps in Canada. The system was created with the goal of helping Skip's internal teams to manage and organize recurrent tasks and solve possible problems that happen every day across the entire order flow  that directly impact the quality of the service provided to all Skip's customers (final customers, restaurants and couriers).
@@ -43,3 +47,186 @@ The Actions System is the main tool used by operations and customer service team
 - **53% Reduction in Action Handling Time** within the first two weeks.  
 - **Increased User Satisfaction**, with agents finding the system faster and easier to use.  
 - **Scalable Framework**, allowing for future improvements in automation and workflow management.
+
+---
+
+# Detailed Case Study
+
+## Actions System: Improving Efficiency and Upgrading Task Management for Operations Teams
+
+The Actions System is the main tool used by operations and customer service teams at SkipTheDishes, one of the biggest food delivery apps in Canada. The system was created to help Skip's internal teams manage and organize recurrent tasks and solve problems that arise daily across the order flow, directly impacting service quality for all customers, restaurants, and couriers.
+
+---
+
+## Context
+
+Every time a customer places an order on the Skip app, a complex system operates in the background. In the early days of SkipTheDishes, a development team built the first version of the Actions System. The system was designed to generate action types automatically when an issue was detected. Some actions were system-generated, while others were manually created by users.
+
+### Early UI (2019)
+- Users had to manually search for action types they needed to work on.
+- A list displayed all currently open actions awaiting resolution.
+
+![LiveOps Old System](/images/projects/actions-system/actions-old-01.png)
+![LiveOps Old System](/images/projects/actions-system/actions-old-02.png)
+
+---
+
+## Problem Statement
+
+- Very outdated UI and really complex UX
+- Company was migrating to another system language (React)
+- Time-consuming and inefficient process for creating, assigning, and managing actions
+- High operational costs and the business was targeting operational efficiency across the company
+
+---
+
+## The Team
+
+- **Product Design**: I was the sole Product Designer for most of the project, with additional support later.
+- **UX Research**: Limited support from a UX Researcher in later testing stages.
+- **Product Team**: Worked closely with the Product Manager, two different POs, and the Head of the Pillar.
+- **Tech Team**: Tech lead as the main point of contact, with involvement from other engineers.
+- **Stakeholders**: Primarily engaged with Ops team managers and agents, as well as Data Science.
+
+![LiveOps Team](/images/projects/actions-system/live-ops-team.png)
+
+---
+
+## Design Process
+
+### Discovery
+
+#### Training and Learning
+The first step was to take the same training as Ops agents to understand the system from their perspective.
+
+#### Interviews & Stakeholder Sync
+Conducted interviews with:
+- New Ops agents during their onboarding.
+- Senior Ops agents experienced with the system.
+- Ops managers and team leads responsible for action assignments.
+- Product and Tech teams.
+
+#### Market Research
+Researched similar tools and found inspiration from a Brazilian company's chat management system.
+
+#### Workflow Analysis & Data Collection
+- Mapped the existing workflow.
+- Identified pain points affecting efficiency.
+- Collected operational performance data to measure success.
+
+##### Key Learnings from Discovery
+- UX and workflow inefficiencies affected performance.
+- Training was time-consuming due to system complexity.
+- Manual steps and lack of automation hindered efficiency.
+
+---
+
+### Define
+
+#### Ideation Sessions (Part I)
+Collaborated with Product and Tech teams to brainstorm solutions. The result was an **automated queue-based system** that prioritized and assigned actions dynamically.
+
+#### LiveOps Platform Vision
+A workshop with leadership helped define the vision for the new system, aligning across teams.
+
+![LiveOps Platform Vision](/images/projects/actions-system/live-ops-platform-vision.png)
+
+#### Business Goals vs User Needs
+- **Business need**: Increase efficiency and reduce costs.
+- **User pain points**:
+  - Team leads manually assigned actions, leading to errors.
+  - Agents navigated multiple screens to gather necessary information.
+  - Manual filtering and assignment processes were inefficient.
+
+##### Key Learnings from Definition
+- Early collaboration with Product and Tech was crucial.
+- Stakeholders appreciated Design involvement from the start.
+- User interviews were the most valuable source of insights.
+- Business goals aligned well with user needs.
+
+---
+
+### Ideate
+
+#### Ideation Sessions (Part II)
+Proposed:
+- A **visual queue** of assigned actions.
+- **Contextual information display** to minimize navigation.
+
+#### Initial Design Exploration
+- Contextual details eliminated the need for multi-screen navigation.
+- Explored whether to include a preview of the action queue.
+
+![Wireframe Exploration 1](/images/projects/actions-system/early-wireframes.png)
+
+#### Initial User Feedback
+Collected feedback via Slack and in-person interviews. Results were positive, leading to high-fidelity prototyping.
+
+##### Wireframe Exploration
+- Focused on **queue + contextual info** approach.
+- Designed for clarity and efficiency.
+
+![Wireframe Exploration 2](/images/projects/actions-system/early-wireframes-2.png)
+
+---
+
+### User Testing
+
+#### Methodology
+- Used a high-fidelity prototype.
+- Agents provided feedback on first impressions and performed task-based testing.
+
+#### Learnings from UX Report
+- Users appreciated **having all necessary info at a glance**.
+  - *“It’s better. We see all the details at one time.”*
+- Users liked the **list of active assigned actions**.
+  - *“[It’s] faster for closing the action or solving them.”*
+- Some users requested **more details in the action list**.
+
+---
+
+### Iteration
+
+#### MVP Approach
+Due to tech constraints, the system's full automation was postponed. Instead, we introduced a **manual Assignment Management page** for Team Leads.
+
+#### Adapting UI to Constraints
+- Reduced contextual information scope.
+- Added **modals and frames** to maintain accessibility without leaving the system.
+
+---
+
+### 👩🏽‍💻 Deliver
+
+#### Handoff & Implementation
+- Used **Abstract** for Sketch file management.
+- Provided **Overflow files** with user flows.
+- Attended sprint meetings for direct communication with devs.
+
+---
+
+### Final Product & Results
+
+![Final Product Screenshot](/images/projects/actions-system/actions-system-cover.png)
+
+#### Impact
+- **53% reduction in action handle time** after only **two weeks**.
+- Improved UX contributed to faster onboarding and lower training time.
+
+#### Summary
+- 🏆 **User satisfaction was high post-launch**.
+- ⚡️ **Efficiency increased significantly**.
+- ✅ **Successful adaptation to tech constraints**.
+
+---
+
+### 💡 Key Takeaways
+- Early Design involvement helped align business, tech, and user needs.
+- UX decisions had a **measurable business impact**.
+- Collaboration across teams was essential for success.
+- Adapting scope while maintaining a strong UX focus led to positive results.
+
+---
+
+## Conclusion
+This project showcased how Product Design can **drive operational efficiency** while balancing business and user needs. Despite challenges, the new Actions System significantly **reduced operational costs**, **improved user experience**, and **increased productivity** for the Ops team.
