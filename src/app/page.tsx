@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column } from "@/once-ui/components";
+import { Heading, Flex, Text, Button, Avatar, RevealFx, Arrow, Column, LogoCloud } from "@/once-ui/components";
 import { Projects } from "@/components/work/Projects";
 
 import { baseURL, routes } from "@/app/resources";
@@ -97,6 +97,63 @@ export default function Home() {
           </RevealFx>
         </Column>
       </Column>
+
+      <RevealFx translateY="8" delay={0.2} fillWidth horizontal="center" fillHeight vertical="center" paddingBottom="s">
+      <Heading wrap="balance" variant="label-default-m">
+          Some of the companies I already worked with
+        </Heading>
+      <LogoCloud
+      limit={3}
+      fillWidth
+      logos={[
+    {
+      href: 'https://www.shopify.com/ca',
+      target: '_blank',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/images/logos/shopify-logo-white.svg'
+    },
+    {
+      href: 'https://www.skipthedishes.com/',
+      target: '_blank',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/images/logos/skip-logo-white.svg'
+    },
+    {
+      href: 'https://winnipeg.ubisoft.com/',
+      target: '_blank',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/images/logos/ubisoft-logo-white.svg'
+    },
+    {
+      href: 'https://www.spud.ca/',
+      target: '_blank',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/images/logos/spud-logo-white.svg'
+    },
+    {
+      href: 'https://oobj.com.br/',
+      target: '_blank',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/images/logos/oobj-logo-white.svg'
+    },
+    {
+      href: 'https://www.tron.com.br/',
+      target: '_blank',
+      icon: false,
+      size: 'xl',
+      wordmarkSrc: '/images/logos/tron-logo-white.svg'
+    },
+  ]}
+  columns="3"
+  mobileColumns="1"
+/>
+</RevealFx>
+
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[1, 1]} />
       </RevealFx>
